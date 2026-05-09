@@ -1,0 +1,532 @@
+/* ===================================
+   Smart Parking Enterprise - Updated UI Styles
+   =================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #2563eb;
+  --secondary: #1d4ed8;
+  --surface: #ffffff;
+  --surface-soft: #f8fafc;
+  --surface-muted: #eff6ff;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --text-inverse: white;
+  --border: #e2e8f0;
+  --shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
+  --radius: 1rem;
+}
+
+html,
+body {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #eef5ff;
+  color: var(--text);
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+button,
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.85rem;
+  transition: all 180ms ease;
+  font-weight: 600;
+}
+
+.btn-primary,
+button.btn-primary {
+  background: var(--primary);
+  color: var(--text-inverse);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  background: #1e40af;
+}
+
+.btn-secondary,
+button.btn-secondary {
+  background: var(--secondary);
+  color: var(--text-inverse);
+}
+
+.btn-secondary:hover {
+  background: #1e40ff;
+}
+
+.btn-light {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid rgba(37, 99, 235, 0.24);
+}
+
+.btn-outline:hover {
+  background: rgba(37, 99, 235, 0.08);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+li {
+  margin: 0;
+}
+
+p {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.auth-page,
+.app-shell {
+  min-height: 100vh;
+  background: #eef5ff;
+}
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.auth-panel {
+  width: min(1120px, 100%);
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.auth-hero {
+  background: linear-gradient(180deg, #1f3b8c 0%, #2563eb 100%);
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  color: white;
+  max-width: 320px;
+}
+
+.hero-badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 1.25rem;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 1.7rem;
+  margin-bottom: 1.75rem;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  opacity: 0.92;
+}
+
+.auth-card {
+  padding: 3rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.auth-card-header h2 {
+  font-size: 1.75rem;
+}
+
+.auth-card-header p {
+  color: var(--text-muted);
+}
+
+.auth-card-body {
+  display: grid;
+  gap: 1rem;
+}
+
+.auth-card-body .btn {
+  width: 100%;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+.sidebar {
+  background: #0f172a;
+  color: white;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-brand {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 1rem;
+  background: var(--primary);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.brand-title {
+  font-weight: 700;
+}
+
+.brand-subtitle {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.9rem;
+}
+
+.sidebar-nav {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 0.95rem 1rem;
+  border-radius: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+  background: rgba(37, 99, 235, 0.2);
+  color: white;
+}
+
+.sidebar-footer {
+  display: grid;
+  gap: 1rem;
+}
+
+.main-panel {
+  padding: 2rem 2.5rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.topbar-badge {
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.14);
+  color: var(--primary);
+}
+
+.topbar-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 700;
+}
+
+.page-content {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.dashboard-grid,
+.summary-grid,
+.entry-layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.dashboard-grid,
+.summary-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.entry-layout {
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.dashboard-card,
+.entry-card,
+.table-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.75rem;
+}
+
+.dashboard-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+}
+
+.card-label {
+  display: inline-flex;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: var(--surface-muted);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.dashboard-card h3,
+.entry-card h3,
+.table-card h3 {
+  margin-bottom: 1rem;
+}
+
+.entry-card label {
+  margin-top: 1rem;
+}
+
+.entry-card .btn,
+.table-card .btn {
+  margin-top: 1rem;
+}
+
+.capture-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.capture-preview {
+  background: var(--surface-soft);
+  border-radius: 1.25rem;
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.capture-details {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.detail-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.stat-box {
+  background: var(--surface);
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+}
+
+.stat-box h4 {
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.stat-box strong {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-box p {
+  color: var(--text-muted);
+}
+
+.table-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+thead {
+  background: var(--surface-soft);
+}
+
+th,
+td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  color: var(--text);
+}
+
+th {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--border);
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+td {
+  font-size: 0.95rem;
+}
+
+.empty-row {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2rem 0;
+}
+
+@media (max-width: 1100px) {
+  .auth-panel,
+  .dashboard-grid,
+  .summary-grid,
+  .entry-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    min-height: auto;
+    border-radius: 0 0 1.5rem 1.5rem;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 720px) {
+  .auth-page {
+    padding: 1rem;
+  }
+
+  .auth-panel {
+    border-radius: 1rem;
+  }
+
+  .auth-card,
+  .auth-hero {
+    padding: 1.75rem;
+  }
+
+  .sidebar {
+    padding: 1.5rem;
+  }
+
+  .main-panel {
+    padding: 1.5rem;
+  }
+
+  .btn,
+  button {
+    width: 100%;
+  }
+
+  table {
+    min-width: 100%;
+  }
+}
