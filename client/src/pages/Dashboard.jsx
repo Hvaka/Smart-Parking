@@ -7,8 +7,9 @@ export default function Dashboard() {
     <PageShell title="Dashboard">
       <div className="dashboard-grid">
         <div className="dashboard-card entry-card">
-          <div>
+          <div className="card-content">
             <span className="card-label">ENTRY</span>
+            <div className="card-icon">➜</div>
             <h3>Register New Vehicle Entry</h3>
           </div>
           <Link className="btn btn-primary" to="/entry">
@@ -16,17 +17,19 @@ export default function Dashboard() {
           </Link>
         </div>
         <div className="dashboard-card exit-card">
-          <div>
+          <div className="card-content">
             <span className="card-label">EXIT</span>
+            <div className="card-icon">⤴</div>
             <h3>Process Vehicle Exit & Payment</h3>
           </div>
           <Link className="btn btn-primary" to="/active">
             Find Vehicle
           </Link>
         </div>
-        <div className="dashboard-card report-card">
-          <div>
+        <div className="dashboard-card data-card">
+          <div className="card-content">
             <span className="card-label">DATA</span>
+            <div className="card-icon">📊</div>
             <h3>View Parking Records & Reports</h3>
           </div>
           <Link className="btn btn-primary" to="/records">
@@ -38,18 +41,21 @@ export default function Dashboard() {
       <div className="summary-grid">
         <div className="stat-box">
           <h4>Today's Entries</h4>
+          <div className="stat-icon">🚗</div>
           <strong>56</strong>
-          <p>125% from yesterday</p>
+          <p>+12% from yesterday</p>
         </div>
         <div className="stat-box">
           <h4>Today's Exits</h4>
+          <div className="stat-icon">🚗</div>
           <strong>42</strong>
-          <p>112% from yesterday</p>
+          <p>+8% from yesterday</p>
         </div>
         <div className="stat-box">
           <h4>Active Vehicles</h4>
+          <div className="stat-icon">🚗</div>
           <strong>14</strong>
-          <p>Currently parked</p>
+          <p>Currently Parked</p>
         </div>
       </div>
     </PageShell>

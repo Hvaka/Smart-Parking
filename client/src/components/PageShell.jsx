@@ -27,6 +27,7 @@ export default function PageShell({ title, children }) {
               isActive ? "sidebar-link active" : "sidebar-link"
             }
           >
+            <span className="sidebar-icon">📊</span>
             Dashboard
           </NavLink>
           <NavLink
@@ -35,6 +36,7 @@ export default function PageShell({ title, children }) {
               isActive ? "sidebar-link active" : "sidebar-link"
             }
           >
+            <span className="sidebar-icon">➡️</span>
             Entry
           </NavLink>
           <NavLink
@@ -43,7 +45,8 @@ export default function PageShell({ title, children }) {
               isActive ? "sidebar-link active" : "sidebar-link"
             }
           >
-            Active
+            <span className="sidebar-icon">⬅️</span>
+            Exit
           </NavLink>
           <NavLink
             to="/records"
@@ -51,13 +54,27 @@ export default function PageShell({ title, children }) {
               isActive ? "sidebar-link active" : "sidebar-link"
             }
           >
-            Records
+            <span className="sidebar-icon">📈</span>
+            Data
           </NavLink>
+          <NavLink
+            to="/active"
+            className={({ isActive }) =>
+              isActive ? "sidebar-link active" : "sidebar-link"
+            }
+          >
+            <span className="sidebar-icon">🚗</span>
+            Active Vehicles
+          </NavLink>
+          <button className="sidebar-link" style={{ background: "none", border: "none", cursor: "pointer", textAlign: "left" }}>
+            <span className="sidebar-icon">⚙️</span>
+            Settings
+          </button>
         </nav>
 
         <div className="sidebar-footer">
-          <span>Welcome, Employee</span>
-          <button className="btn btn-light" onClick={handleLogout}>
+          <button className="sidebar-link logout-btn" onClick={handleLogout}>
+            <span className="sidebar-icon">🚪</span>
             Logout
           </button>
         </div>
